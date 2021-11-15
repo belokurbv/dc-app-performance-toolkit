@@ -45,7 +45,6 @@ def app_specific_action(webdriver, datasets):
             addButton = page.get_elements((By.CLASS_NAME, "aui-button-primary"))
             addButton[8].click()
             page.wait_until_visible((By.XPATH, '//*[@id="agile-board-custom-filters"]/tbody[2]/tr/td[4]/a'))
-            webdriver.save_screenshot(userId + 'addfilter.png')
         sub_measure()
 
         @print_timing("selenium_app_custom_action:use-filter")
@@ -68,4 +67,3 @@ def app_specific_action(webdriver, datasets):
             page.wait_until_invisible((By.XPATH, '//*[@id="agile-board-custom-filters"]/tbody[2]/tr/td[4]/a'))
         sub_measure()
     measure()
-
